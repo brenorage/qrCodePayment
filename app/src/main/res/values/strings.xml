@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">QRCodePaymentSample</string>
+    <string name="buttonScan">Escanear codigo</string>
 </resources>
