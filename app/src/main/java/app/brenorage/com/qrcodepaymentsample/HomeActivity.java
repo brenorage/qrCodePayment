@@ -1,6 +1,6 @@
 package app.brenorage.com.qrcodepaymentsample;
 
-import android.content.ActivityNotFoundException;
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,12 +11,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import app.brenorage.com.qrcodepaymentsample.Utils.Constants;
+
 public class HomeActivity extends AppCompatActivity {
 
     private Button scanCode;
     public String contents;
     public String format;
     public AlertDialog.Builder dialog;
+    private Activity mActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
     public void loadComponents() {
         scanCode = (Button) findViewById(R.id.buttonScan);
         dialog = new AlertDialog.Builder(this);
+        mActivity = this;
     }
 
     public void loadListeners() {
